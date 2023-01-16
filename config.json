@@ -1,0 +1,20 @@
+{ 	     "name": "ConvMixer",
+             "batch-size": 48, 
+             "resized_resolution": 224,
+             "scale": 0.75,
+             "reprob": 0.25,
+             "ra-m": 8,
+             "ra-n": 1,
+             "jitter": 0.1,
+             
+             "hdim":    1024,
+             "depth":   20,
+             "psize":   14,
+             "conv-ks": 9,
+
+             "wd" : 0.01,
+             "epochs" : 20,
+             "lr": 1e-4,
+             "workers": 8,
+             "gpu": [0,1]
+}
