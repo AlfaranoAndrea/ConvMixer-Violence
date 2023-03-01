@@ -19,13 +19,13 @@
 ## step 3 - pretrain the model:
 1. run train.py with the following comand: python3 train.py --gpus 0 1 --epochs 20 --name 3x3_res224_batchsize144 --gradient_accumulation 3 --finetune convmixer --n_classes 101
 
-## step 3 - test the pretrained model:
+## step 4 - test the pretrained model:
 1. run evaluation.py giving with --finetune parameter the path to the model. 
 For example the following comand: python3 evaluation.py --finetune ./checkpoints/3x3_res224_batchsize144-file=0-epoch=17-val_loss=0.32-other_metric=0.00.ckpt  --data_path ./dataset/UCF101
  
-## step 4 - final trainin on the target dataset:
+## step 5 - final trainin on the target dataset:
 1. run train.py with the following comand: python3 train.py --gpus 0 1 --epochs 20 --name Finetuned_3x3_res224_batchsize144 --gradient_accumulation 3 --finetune ./checkpoints/3x3_res224_batchsize144-file=0-epoch=17-val_loss=0.32-other_metric=0.00.ckpt --n_classes 2 --data_path ./dataset/RealLifeViolence
 
-## step 5 - test the pretrained model:
+## step 6 - test the pretrained model:
 1. run evaluation.py giving with --finetune parameter the path to the model. 
 For example the following comand: python3 evaluation.py --finetune ./checkpoints/3x3_res224_batchsize144-file=0-epoch=17-val_loss=0.32-other_metric=0.00.ckpt --n_classes 2 --data_path ./dataset/RealLifeViolence
